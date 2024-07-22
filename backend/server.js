@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 
-const admin = require("firebase-admin");
+const admin = require("../node_modules/firebase-admin");
 const credentials = require("./key.json");
 
 admin.initializeApp({
@@ -57,6 +57,7 @@ app.get("/read/:id", async (req, res) => {
 app.post("/update", async (req, res) => {
   try {
     const id = req.body.id;
+    //TODO: Change this to recieve all data and change to the new data
     const newFirstName = "Ilse Maria";
     const userRef = await db.collection("users").doc(id).update({
       firstName: newFirstName,

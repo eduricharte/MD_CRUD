@@ -1,14 +1,16 @@
 {
   "name": "md-bd",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "CRUD hecho con Node JS y Angular para la empresa Mejores Destinos (reutilizable)",
   "scripts": {
-    "ng": "ng",
+    "ng:frontend": "ng",
     "start:frontend": "ng serve",
     "start:backend": "nodemon ./backend/server.js",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "build:frontend": "ng build",
+    "watch:frontend": "ng build --watch --configuration development",
+    "test:frontend": "ng test"
   },
+  "license": "ISC",
   "private": true,
   "dependencies": {
     "@angular/animations": "^18.1.0",
